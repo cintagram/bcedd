@@ -1,7 +1,5 @@
 import argparse
 import os
-import tkinter as tk
-from tkinter import filedialog
 from typing import Optional
 
 from bcedd import event_data, game_version, country_code
@@ -14,13 +12,11 @@ def save_file(name: str, data: bytes):
         name (str): Name of the file.
         data (bytes): Data to save to the file.
     """
-    root = tk.Tk()
-    root.withdraw()
-    root.attributes("-topmost", True)  # type: ignore
-    file_path = filedialog.asksaveasfilename(initialfile=name, defaultextension=".tsv")
-    if file_path:
-        with open(file_path, "wb") as f:
-            f.write(data)
+    #root = tk.Tk()
+    #root.withdraw()
+    #root.attributes("-topmost", True)  # type: ignore
+    #file_path = filedialog.asksaveasfilename(initialfile=name, defaultextension=".tsv")
+    pass
 
 
 def save_file_no_dialog(name: str, data: bytes, output: str):
